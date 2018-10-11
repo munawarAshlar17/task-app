@@ -1,5 +1,6 @@
 <template>
     <div class="container-fluid">
+        <hr>
         <div class="row-fluid">
             <div class="span12">
                 <div class="span2" style="width: 15%;">

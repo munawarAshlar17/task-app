@@ -1,7 +1,7 @@
 <template>
     <div class="home-page">
 
-       <NavigationBar></NavigationBar>
+        <NavigationBar></NavigationBar>
         <div class="container-fluid">
             <h1>Must-Have Content for Your Homepage: 7 Steps for Success</h1>
             <p>
@@ -45,7 +45,7 @@
                 What’s new?
                 Be sure to include news and upcoming events on your homepage. The benefit is twofold: It gives visitors an idea of what you’re currently doing and proves that your content is up-to-date. Don’t let this section take up too much space. Use teasers and provide a link to a dedicated “news” page for visitors who want to read more.
             </p>
-            <hr>
+
         </div>
         <Footer></Footer>
 
@@ -63,9 +63,8 @@
             AddTodo,
             Footer,
             NavigationBar
-
-
         }
+
     }
 </script>
 
