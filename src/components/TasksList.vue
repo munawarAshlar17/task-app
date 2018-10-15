@@ -36,7 +36,7 @@
             }
         },
         created(){
-            this.$http.get('https://vueapp-32d4d.firebaseio.com/tasks.json').then(function (data) {
+            this.$http.get('https://task-219514.firebaseio.com/tasks.json').then(function (data) {
                 return data.json();
 
             }).then(function (data) {
