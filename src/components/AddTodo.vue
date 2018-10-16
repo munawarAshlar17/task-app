@@ -22,21 +22,6 @@
 
                 </div>
             </div>
-            <!--<div class="row">-->
-
-                <!--<div class=" col-md-6 col-md-offset-3" v-if="!submitted">-->
-                    <!--<hr>-->
-                    <!--<div class="panel panel-default">-->
-
-                        <!--<div class="panel-body">-->
-                            <!--<h2>Task Preview</h2>-->
-                            <!--<span><h5> Task: {{this.tasks.name}}</h5> </span>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-            <!--</div>-->
-
 
             <div>
                 <h2>Search and add a pin</h2>
@@ -94,6 +79,7 @@
                         name: '',
                         lat:'',
                         lng:'',
+                        place_name:'',
                     },
                 center: { lat: 37.0902, lng: 95.7129},
                 markers: [],
@@ -115,6 +101,7 @@
                         name:this.tasks.name,
                         lat:this.lat,
                         lng:this.lng,
+                        place_name:this.place_name,
                     }
                 ).then(function () {
                     this.submitted = true;
@@ -128,6 +115,7 @@
                 this.currentPlace = place;
                 this.lat=this.currentPlace.geometry.location.lat();
                 this.lng=this.currentPlace.geometry.location.lng();
+                this.place_name=this.currentPlace.formatted_address;
 
             },
             addMarker() {
