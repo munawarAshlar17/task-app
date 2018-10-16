@@ -1,36 +1,46 @@
 <template>
-    <div class="edit-task">
+    <div class="edit-task bg-grey-lightest text-justify font-sans">
         <NavigationBar></NavigationBar>
-        <div class="container-fluid">
-            <h2>Edit Task</h2>
+        <div class="container mx-auto">
+            <h2 class="text-center">Edit Task</h2>
             <div class="row">
 
                 <div class="col-md-8 col-md-offset-2">
                     <div v-if="submitted">
-                        <div class="alert alert-success">
-                            <strong>Success!</strong> Your task has added.
-                        </div>
+                        <div class="bg-green-lightest border border-green-light text-green-dark px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Success!</strong>
+                        <span class="block sm:inline">Task added.</span>
+                        <span class="absolute pin-t pin-b pin-r px-4 py-3">
+                            <svg class="fill-current h-6 w-6 text-green" viewBox="0 0 20 20"></svg>
+                             </span>
                     </div>
-                    <input name="todo" class="form-control" placeholder="Enter your task..." v-model="tasks.name" >
-                    <br>
+                    </div>
+                    <label class="block text-grey-darker text-sm font-bold mb-2" >
+                        Your Task
+                    </label>
+                    <input name="todo" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your task..." v-model="tasks.name" >
 
                     <div>
-                        <h2>Search and add a pin</h2>
-                        <label>
-                            <gmap-autocomplete
-                                    @place_changed="setPlace" class=" change-height" v-model="tasks.place_name">
-                            </gmap-autocomplete>
-                            &nbsp;
-                            &nbsp;
-                            <button @click="addMarker" class="btn btn-primary button" >Update Place</button>
+                        <br>
+                        <label class="block text-grey-darker text-sm font-bold mb-2" >
+                            Task Location
                         </label>
-                        <br/>
+                        <label>
+                            <gmap-autocomplete class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline change-height"
+                                    @place_changed="setPlace"  v-model="tasks.place_name">
+                            </gmap-autocomplete>
+                            <br>
+                            <br>
+                            <button @click="addMarker" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full float-right" >Change Place</button>
+                        <br>
+                        </label>
+                        <br>
 
                     </div>
                     <br>
                     <gmap-map
                             :center="center"
-                            :zoom="12"
+                            :zoom="20"
                             style="width:100%;  height: 400px;"
                     >
                         <gmap-marker
@@ -40,17 +50,21 @@
                                 @click="center=m.position"
                         ></gmap-marker>
                     </gmap-map>
+<br>
 
                     <hr>
-                    <button class="btn btn-success pull-right" v-on:click.prevent="postTask" >Update Task</button>
+                    <button class="bg-green-dark hover:bg-green-darker text-white font-bold py-2 px-4 rounded-full float-right mx-2" v-on:click.prevent="postTask" >Update Task</button>
 
-                    <button class="btn btn-danger cancel" v-on:click="cancelTask">Cancel</button>
+                    <button class="bg-red-dark hover:bg-red-darker text-white font-bold py-2 px-4 rounded-full float-right" v-on:click="cancelTask">Cancel</button>
 
 
                 </div>
             </div>
 
         </div>
+        <br>
+        <br>
+        <br>
         <Footer></Footer>
     </div>
 </template>
@@ -108,7 +122,8 @@
                     });
                 },
                 cancelTask() {
-                    return this.tasks.name = '';
+                     this.tasks.name = '';
+                     this.tasks.place_name='';
                 },
 
                 setPlace(place) {
@@ -145,18 +160,9 @@
 </script>
 
 <style scoped>
-    .cancel{
-        margin-left:975px;
-    }
-    .vue-map-container {
-        height: 450px;
-        max-width: 992px;
-        width: 100%;
-    }
+
     .change-height{
-        height: 40px;
+        height: 35px;
     }
-    .button{
-        margin-top: -15px;
-    }
+
 </style>

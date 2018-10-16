@@ -1,20 +1,35 @@
 <template>
-    <div class="navigation-bar">
-        <div class="header container-fluid">
-            <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Vue Application</a>
-                    </div>
-                    <ul class="nav navbar-nav">
-                        <li ><router-link to="/">Home Page</router-link></li>
-                        <li><router-link to="/addtodo">Add Task</router-link></li>
-                        <li><router-link to="tasks/list">Tasks List</router-link></li>
-                    </ul>
+    <div class="navigation-bar font-sans">
+
+
+        <nav class="flex items-center justify-between flex-wrap bg-black p-6">
+            <div class="flex items-center flex-no-shrink text-white mr-6">
+                <svg class="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
+                <span class="font-semibold text-xl tracking-tight">Vue Application</span>
+            </div>
+            <div class="block lg:hidden">
+                <button class="flex items-center px-3 py-2 border rounded text-teal-lighter border-teal-light hover:text-white hover:border-white">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+                <div class="text-sm lg:flex-grow">
+
+                    <a><router-link to="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 no-underline">Home Page  <i class="fas fa-home"></i></router-link></a>
+
+                    <a ><router-link to="/addtodo" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 no-underline">Add Task <i class="fas fa-plus"></i></router-link>
+                    </a>
+                    <a> <router-link to="/tasks/list" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4 no-underline">Tasks List <i class="fas fa-list-alt"></i> </router-link>
+                    </a>
                 </div>
-            </nav>
-        </div>
+                <div>
+                    <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 lg:mt-0">Download</a>
+                </div>
+            </div>
+        </nav>
+        <br>
     </div>
+
 </template>
 
 <script>

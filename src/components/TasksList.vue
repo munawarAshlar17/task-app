@@ -1,22 +1,26 @@
 <template>
-    <div class="taska-list">
+    <div class="taska-list bg-grey-lightest text-justify font-sans">
         <NavigationBar></NavigationBar>
         <div class="container-fluid">
             <div class="row">
-                <h1>List of Tasks</h1>
-                <div class="col-md-8 col-md-offset-2">
-                    <div v-bind:key="task.id" v-for="task in taskslist" class="single-blog">
-                        <router-link v-bind:to="'/task/edit/'+ task.id"><span class="dot"></span> Task: {{task.name}}</router-link>
+                <h1 class="text-center">List of Tasks</h1>
+                <div class="flex">
+                    <div class="w-full w-1/4  "></div>
+                    <div class="w-full w-2/4 bg-grey-light p-4">
+                        <div v-bind:key="task.id" v-for="task in taskslist" class="single-blog">
+                            <router-link class="no-underline text-blue-darkest text-lg font-semibold capitalize hover:text-blue-light text-center" v-bind:to="'/task/edit/'+ task.id"><span class="dot"></span> {{task.name}} <i class="far fa-edit"></i></router-link>
+                        </div>
                     </div>
-
-
+                    <div class="w-full w-1/4"></div>
 
                 </div>
             </div>
 
         </div>
-
+<br>
+<br>
         <Footer></Footer>
+
     </div>
 </template>
 

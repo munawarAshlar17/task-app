@@ -1,68 +1,62 @@
 <template>
-    <div class="container-fluid">
-        <hr>
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="span2" style="width: 15%;">
-                    <ul class="unstyled">
-                        <li>GitHub<li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact & support</a></li>
-                        <li><a href="#">Enterprise</a></li>
-                        <li><a href="#">Site status</a></li>
+    <div class="font-sans">
+        <div class="containe bg-black p-8 font-sans">
+            <div class="sm:flex mb-4">
+                <div class="sm:w-1/4 h-auto">
+                    <div class="text-orange mb-2">Orange</div>
+                    <ul class="list-reset leading-normal">
+                        <li class="hover:text-orange text-grey-darker">One</li>
+                        <li class="hover:text-orange text-grey-darker">Two</li>
+                        <li class="hover:text-orange text-grey-darker">Three</li>
+                        <li class="hover:text-orange text-grey-darker">Four</li>
+                        <li class="hover:text-orange text-grey-darker">Five</li>
+                        <li class="hover:text-orange text-grey-darker">Six</li>
+                        <li class="hover:text-orange text-grey-darker">Seven</li>
+                        <li class="hover:text-orange text-grey-darker">Eight</li>
                     </ul>
                 </div>
-                <div class="span2" style="width: 15%;">
-                    <ul class="unstyled">
-                        <li>Applications<li>
-                        <li><a href="#">Product for Mac</a></li>
-                        <li><a href="#">Product for Windows</a></li>
-                        <li><a href="#">Product for Eclipse</a></li>
-                        <li><a href="#">Product mobile apps</a></li>
+                <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+                    <div class="text-blue mb-2">Blue</div>
+                    <ul class="list-reset leading-normal">
+                        <li class="hover:text-blue text-grey-darker">One</li>
+                        <li class="hover:text-blue text-grey-darker">Two</li>
+                        <li class="hover:text-blue text-grey-darker">Three</li>
                     </ul>
-                </div>
-                <div class="span2" style="width: 15%;">
-                    <ul class="unstyled">
-                        <li>Services<li>
-                        <li><a href="#">Web analytics</a></li>
-                        <li><a href="#">Presentations</a></li>
-                        <li><a href="#">Code snippets</a></li>
-                        <li><a href="#">Job board</a></li>
+
+                    <div class="text-blue-light mb-2 mt-4">Blue-light</div>
+                    <ul class="list-reset leading-normal">
+                        <li class="hover:text-blue-light text-grey-darker">One</li>
+                        <li class="hover:text-blue-light text-grey-darker">Two</li>
+                        <li class="hover:text-blue-light text-grey-darker">Three</li>
                     </ul>
+
                 </div>
-                <div class="span2" style="width: 15%;">
-                    <ul class="unstyled">
-                        <li>Documentation<li>
-                        <li><a href="#">Product Help</a></li>
-                        <li><a href="#">Developer API</a></li>
-                        <li><a href="#">Product Markdown</a></li>
-                        <li><a href="#">Product Pages</a></li>
+                <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+                    <div class="text-green-dark mb-2">Green-dark</div>
+                    <ul class="list-reset leading-normal">
+                        <li class="hover:text-green-dark text-grey-darker">One</li>
+                        <li class="hover:text-green-dark text-grey-darker">Two</li>
+                        <li class="hover:text-green-dark text-grey-darker">Three</li>
                     </ul>
-                </div>
-                <div class="span2" style="width: 15%;">
-                    <ul class="unstyled">
-                        <li>More<li>
-                        <li><a href="#">Training</a></li>
-                        <li><a href="#">Students & teachers</a></li>
-                        <li><a href="#">The Shop</a></li>
-                        <li><a href="#">Plans & pricing</a></li>
-                        <li><a href="#">Contact us</a></li>
+
+                    <div class="text-green-light mb-2 mt-4">Green-light</div>
+                    <ul class="list-reset leading-normal">
+                        <li class="hover:text-green-light text-grey-darker">One</li>
+                        <li class="hover:text-green-light text-grey-darker">Two</li>
+                        <li class="hover:text-green-light text-grey-darker">Three</li>
                     </ul>
+
+
                 </div>
-            </div>
-        </div>
-        <hr>
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="span8">
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Security</a>
+                <div class="sm:w-1/2 sm:mt-0 mt-8 h-auto">
+                    <div class="text-red-light mb-2">Newsletter</div>
+                    <p class="text-grey-darker leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, consectetur. </p>
+                    <div class="mt-4 flex">
+                        <input type="text" class="p-2 border border-grey-light round text-grey-dark text-sm h-auto" placeholder="Your email address">
+                        <button class="bg-orange text-white rounded-sm h-auto text-xs p-3">Subscribe</button>
+                    </div>
                 </div>
-                <div class="span4">
-                    <p class="muted pull-right">© 2013 Company Name. All rights reserved</p>
-                </div>
+
             </div>
         </div>
     </div>
