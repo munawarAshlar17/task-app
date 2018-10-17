@@ -1,8 +1,8 @@
 <template>
-    <div class="font-sans">
-        <div class="containe bg-black p-8 font-sans">
-            <div class="sm:flex mb-4">
-                <div class="sm:w-1/4 h-auto">
+    <div class="font-sans container-full">
+        <div class=" bg-black p-8 font-sans">
+            <div class="flex" >
+                <div class="w-full w-1/4 p-4">
                     <div class="text-orange mb-2">Orange</div>
                     <ul class="list-reset leading-normal">
                         <li class="hover:text-orange text-grey-darker">One</li>
@@ -15,7 +15,7 @@
                         <li class="hover:text-orange text-grey-darker">Eight</li>
                     </ul>
                 </div>
-                <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+                <div class="w-full w-1/4 p-4">
                     <div class="text-blue mb-2">Blue</div>
                     <ul class="list-reset leading-normal">
                         <li class="hover:text-blue text-grey-darker">One</li>
@@ -31,7 +31,7 @@
                     </ul>
 
                 </div>
-                <div class="sm:w-1/4 h-auto sm:mt-0 mt-8">
+                <div class="w-full w-1/4 p-4">
                     <div class="text-green-dark mb-2">Green-dark</div>
                     <ul class="list-reset leading-normal">
                         <li class="hover:text-green-dark text-grey-darker">One</li>
@@ -48,14 +48,14 @@
 
 
                 </div>
-                <div class="sm:w-1/2 sm:mt-0 mt-8 h-auto">
-                    <div class="text-red-light mb-2">Newsletter</div>
-                    <p class="text-grey-darker leading-normal">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, consectetur. </p>
-                    <div class="mt-4 flex">
-                        <input type="text" class="p-2 border border-grey-light round text-grey-dark text-sm h-auto" placeholder="Your email address">
-                        <button class="bg-orange text-white rounded-sm h-auto text-xs p-3">Subscribe</button>
-                    </div>
-                </div>
+                <!--<div class="w-full w-1/4 p-4">-->
+                    <!--<div class="text-red-light mb-2">Newsletter</div>-->
+                    <!--<p class="text-grey-darker">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, consectetur. </p>-->
+                    <!--<div class="mt-4 flex py-4">-->
+                        <!--<input type="text" class="px-2 border border-grey-light round text-grey-dark text-sm h-auto" placeholder="Your email address">-->
+                        <!--<button class="bg-orange text-white rounded-sm h-auto text-xs p-3">Subscribe</button>-->
+                    <!--</div>-->
+                <!--</div>-->
 
             </div>
         </div>

@@ -78,7 +78,6 @@
 
 <script>
 
-debugger;
 
     import NavigationBar from "../Layout/NavigationBar";
     import Footer from "../Layout/Footer";
