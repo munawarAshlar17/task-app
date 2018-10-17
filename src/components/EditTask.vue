@@ -1,11 +1,12 @@
 <template>
     <div class="edit-task bg-grey-lightest text-justify font-sans">
         <NavigationBar></NavigationBar>
-        <div class="container mx-auto">
+        <div class="container mx-auto px-4">
+            <br>
             <h2 class="text-center">Edit Task</h2>
             <div class="row">
 
-                <div class="col-md-8 col-md-offset-2">
+
                     <div v-if="submitted">
                         <div class="bg-green-lightest border border-green-light text-green-dark px-4 py-3 rounded relative" role="alert">
                         <strong class="font-bold">Success!</strong>
@@ -31,13 +32,16 @@
                             </gmap-autocomplete>
                             <br>
                             <br>
-                            <button @click="addMarker" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full float-right" >Change Place</button>
+                            <label class="block text-grey-darker text-sm font-bold mb-2" >
+                                Related Map
+                            </label>
+                            <!--<button @click="addMarker" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full float-right" >Change Place</button>-->
                         <br>
                         </label>
-                        <br>
+
 
                     </div>
-                    <br>
+
                     <gmap-map
                             :center="center"
                             :zoom="20"
@@ -60,8 +64,6 @@
 
                 </div>
             </div>
-
-        </div>
         <br>
         <br>
         <br>
@@ -131,6 +133,7 @@
                     this.tasks.lat = this.currentPlace.geometry.location.lat();
                     this.tasks.lng = this.currentPlace.geometry.location.lng();
                     this.tasks.place_name = this.currentPlace.formatted_address;
+                    this.addMarker();
 
                 },
                 addMarker() {

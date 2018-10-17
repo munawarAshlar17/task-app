@@ -2,7 +2,7 @@
     <div class="home-page bg-grey-lightest text-justify font-sans">
 
         <NavigationBar></NavigationBar>
-        <div class="container mx-auto">
+        <div class="container mx-auto px-4">
             <h1 class="font-serif text-blue-darkest px-4 sm:font-sans lg:font-sans uppercase">Must-Have Content for Your Homepage: 7 Steps for Success</h1>
 
             <div class="flex">
@@ -44,11 +44,7 @@
                     Taking steps to improve your homepage will greatly increase the value of your entire site, as customers are increasingly looking at a company’s online presence before doing business with said company. Let’s take a look at some of the must-have content that should be included on all homepages.
                 </p>
                 </div>
-
-
             </div>
-
-
         </div>
         <Footer></Footer>
 

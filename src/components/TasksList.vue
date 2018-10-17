@@ -1,17 +1,19 @@
 <template>
     <div class="taska-list bg-grey-lightest text-justify font-sans">
         <NavigationBar></NavigationBar>
-        <div class="container-fluid">
+        <div class="container mx-auto px-4">
             <div class="row">
+                <br>
                 <h1 class="text-center">List of Tasks</h1>
+                <br>
                 <div class="flex">
-                    <div class="w-full w-1/4  "></div>
-                    <div class="w-full w-2/4 bg-grey-light p-4">
+                    <!--<div class="w-full w-1/3  "></div>-->
+                    <div class="w-full w-1 bg-grey-light p-4">
                         <div v-bind:key="task.id" v-for="task in taskslist" class="single-blog">
                             <router-link class="no-underline text-blue-darkest text-lg font-semibold capitalize hover:text-blue-light text-center" v-bind:to="'/task/edit/'+ task.id"><span class="dot"></span> {{task.name}} <i class="far fa-edit"></i></router-link>
                         </div>
                     </div>
-                    <div class="w-full w-1/4"></div>
+                    <!--<div class="w-full w-1/3"></div>-->
 
                 </div>
             </div>
@@ -61,7 +63,7 @@
 
 <style scoped>
     .single-blog{
-        padding: 20px;
+        padding: 10px;
         margin: 20px 0;
         box-sizing: border-box;
         background: #eee;

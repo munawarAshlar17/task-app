@@ -1,9 +1,10 @@
 <template>
     <div class="add-todo-list  bg-grey-lightest text-justify font-sans">
         <NavigationBar></NavigationBar>
-        <div class="container mx-auto">
+        <div class="container mx-auto px-4">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+
+                <br>
                     <h1 class="text-center">
                         Add Todo List
                     </h1>
@@ -22,28 +23,29 @@
                     </label>
                     <input name="todo" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your task..." v-model="tasks.name" >
                     <br>
-
-
-
-
                     <div>
                         <br>
                         <label class="block text-grey-darker text-sm font-bold mb-2" >
                             Task Location
                         </label>
+
                         <label>
-                            <gmap-autocomplete
-                                    @place_changed="setPlace" class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline change-height">
+                        <gmap-autocomplete
+                                    @place_changed="setPlace"   class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline change-height" >
                             </gmap-autocomplete>
                             <br>
                             <br>
-                            <button @click="addMarker" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full float-right " >Add Place</button>
+                            <label class="block text-grey-darker text-sm font-bold mb-2" >
+                                Related Map
+                            </label>
+
+
+                            <!--<button @click="addMarker" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full float-right " >Add Place</button>-->
                         </label>
                         <br>
 
                     </div>
-                    <br>
-                    <br>
+
                     <gmap-map
                             :center="center"
                             :zoom="12"
@@ -66,7 +68,7 @@
 
                 </div>
             </div>
-        </div>
+
         <br>
         <br>
         <br>
@@ -76,7 +78,7 @@
 
 <script>
 
-
+debugger;
 
     import NavigationBar from "../Layout/NavigationBar";
     import Footer from "../Layout/Footer";
@@ -84,7 +86,6 @@
 
         name: "AddTodo",
         components: {Footer, NavigationBar},
-
         data() {
             return {
                 submitted: false,
@@ -98,11 +99,14 @@
                 center: { lat: 37.0902, lng: 95.7129},
                 markers: [],
                 places: [],
-                currentPlace: null
+                currentPlace: null,
+
+
             }
         },
         mounted() {
             this.geolocate();
+
         },
 
 
@@ -128,11 +132,13 @@
                 this.tasks.place_name='';
 
             },
+
             setPlace(place) {
                 this.currentPlace = place;
                 this.lat=this.currentPlace.geometry.location.lat();
                 this.lng=this.currentPlace.geometry.location.lng();
                 this.place_name=this.currentPlace.formatted_address;
+                this.addMarker();
 
             },
             addMarker() {
@@ -155,7 +161,7 @@
                     };
                 });
             }
-        }
+        },
 
     }
 </script>
